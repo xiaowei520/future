@@ -1,0 +1,174 @@
+<include file="Public/header" />
+
+
+
+
+<!--主体-->
+
+<div class="container m0 bod top70" id="zt">
+	<div class="row">
+		<div class="col-md-6 t0b0 ">
+			<ol class="breadcrumb t0b0">
+				<li><a href="/index">首页</a></li>
+				<li class="active">个人中心</li>
+			</ol>
+		</div>
+		<div class="col-md-6 t0b0 txtr"></div>
+	</div>
+
+	<div class="row top10 mym">
+		<!--左-->
+
+		<div class="col-md-4 myleft">
+			<div class="myleft-n">
+				<h6>PROMULGATOR</h6>
+				<a href="#" data-toggle="modal" data-target="#exampleModal2"> <img
+					id="tou" src="tx/22.png" class="f imgr20">
+				</a>
+				<div class="f imgf20">
+					<h4>{$user_info['account_name']}</h4>
+					<i class="fa fa-map-marker"></i>火星
+				</div>
+
+				<div class="df"></div>
+			</div>
+			<div class="df"></div>
+			<div class="myleft-n">
+
+				<ul class="list-group">
+					<li class="list-group-item"><i class="fa fa-user-secret"></i>&nbsp;第
+						{$user_info['id']}位会员</li>
+					<li class="list-group-item"><span class="badge red">{$user_info['wealth_value']}</span> <i
+						class="fa fa-btc"></i>&nbsp;我的jQ币</li>
+					<li class="list-group-item"><span class="badge">{$user_info['notice_num']}</span> <i
+						class="fa fa-heart"></i>&nbsp;关注我的人数</li>
+				</ul>
+
+
+				<a class="btn btn-success" href="zxzf.aspx" target="_blank"
+					style="width: 100%"><i class="fa fa-jpy"></i>购买jQ币</a> <a
+					class="btn btn-info top10" href="jquerySubmit.aspx"
+					style="width: 100%">发布资源获得jQ币</a>
+
+				<div class="alert alert-warning top20" role="alert"
+					style="background-color: #fefcee; padding-top: 7px; padding-bottom: 7px">
+					<i class="fa fa-lightbulb-o"></i> 最新修复上传插件中代码内容过滤问题！<br /> <i
+						class="fa fa-lightbulb-o"></i> 签到功能完成，可以签到获得jq币！<br /> <i
+						class="fa fa-lightbulb-o"></i> 现在可以通过点击↑上方头像来修改头像了！<br />
+				</div>
+
+
+
+			</div>
+			<div class="df"></div>
+		</div>
+
+		<!--end 左-->
+		<!--右-->
+		<div class="col-md-8 myright">
+			<div class="myright-n">
+				<div class="myNav row">
+					<a href="mem116344"><i class="fa fa-codepen"></i> 我发布的插件</a> <a
+						href="msc116344"><i class="fa fa-heart"></i> 我收藏的插件</a> <a
+						href="#"><i class="fa fa-user"></i> 资料</a> <a href="#">账号</a> <a
+						href="#" data-toggle="modal" data-target="#exampleModal"><i
+						class="fa fa-pencil-square-o"></i> 签到</a>
+				</div>
+				<div class="row topx myMinh">
+
+					<div class="spjz"></div>
+				</div>
+			</div>
+		</div>
+		<!--end 右-->
+	</div>
+
+
+	<!--end主体-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="exampleModalLabel">
+						<i class="fa fa-pencil-square-o"></i> 签到
+					</h4>
+				</div>
+				<div class="modal-body">
+					<iframe src="" width="100%" height="100%"
+						frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end主体-->
+	<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="exampleModalLabel2">
+						<i class="fa fa-picture-o"></i> 设置头像
+					</h4>
+				</div>
+				<div class="modal-body" style="height: 550px">
+					<iframe name="myFrame" src="myPhoto.aspx" width="100%"
+						height="100%" frameborder="0"></iframe>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary" onclick="tx()"
+						data-dismiss="modal">保存头像</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+
+	</script>
+
+
+	<!--end底部-->
+
+	<script type="text/javascript">
+		function tx() {
+			$.ajax({
+				type : "POST",
+				url : "myPhotoSave.aspx",
+				data : "tx=" + myFrame.window.tx,
+				success : function(msg) {
+					if (msg != "n") {
+						$("#tou").attr('src', "tx/" + msg + ".png");
+					}
+				}
+			});
+
+		}
+		function clockms(id) {
+			var yz = $.ajax({
+				type : 'post',
+				url : 'mess.aspx',
+				data : {
+					id : id
+				},
+				cache : false,
+				dataType : 'text',
+				success : function(data) {
+
+				},
+				error : function() {
+				}
+			});
+		}
+	</script>
+
+
+	<include file="Public/footer" />

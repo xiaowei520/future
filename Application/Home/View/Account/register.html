@@ -1,0 +1,199 @@
+<include file="Public/header" />
+<link href="{$static_url}/css/dll.css" rel="stylesheet" media="screen">
+
+<div class="login">
+	<div class="loingnr">
+		<div class="modal-body">
+
+			<div class="input-group input-group-lg">
+				<span class="input-group-addon" id="sizing-s1"><i
+					class="fa fa-envelope-o" style="width: 18px"></i></span> <input
+					id="myemail" class="form-control" placeholder="请输入登录邮箱"
+					aria-describedby="sizing-addon1" type="text" name="name" size="30"
+					onblur="emailgs(this)"> <span
+					class="input-group-btn tccBut"> <a href="#"
+					onclick="yzmfs()" id="bt" class="btn btn-success "
+					style="width: 130px; font-size: 15px; line-height: 28px">获取验证码</a>
+				</span>
+			</div>
+			<div class="alert alert-danger errts top10" id="empdts" role="alert"
+				style="display: none">
+				<i class="fa fa-info-circle"></i> <span id="erremailts">
+					此邮箱已经被注册过</span>
+			</div>
+
+			<div class="input-group input-group-lg top20">
+				<span class="input-group-addon" id="sizing-s2"><i
+					class="fa fa-user-secret" style="width: 18px"></i></span> <input
+					type="text" class="form-control" id="myhm" placeholder="用户名"
+					aria-describedby="sizing-addon1" onblur="yhmok(this)">
+			</div>
+
+
+			<div class="input-group input-group-lg top20">
+				<span class="input-group-addon" id="sizing-s5"><i
+					class="fa fa-qrcode" style="width: 18px"></i></span> <input type="text"
+					class="form-control" id="yzm" placeholder="请输入验证码"
+					aria-describedby="sizing-addon1">
+			</div>
+			<div class="input-group input-group-lg top20">
+				<span class="input-group-addon" id="sizing-s3"><i
+					class="fa fa-lock" style="width: 18px"></i></span> <input type="password"
+					class="form-control" id="pwd1" placeholder="请输入登录密码"
+					aria-describedby="sizing-addon1">
+			</div>
+			<div class="input-group input-group-lg top20">
+				<span class="input-group-addon" id="sizing-s4"><i
+					class="fa fa-key" style="width: 18px"></i></span> <input type="password"
+					class="form-control" id="pwd2" placeholder="确认登录密码"
+					aria-describedby="sizing-addon1" onblur="yzm()"> <span
+					class="input-group-btn tccBut"> <input type="button"
+					class="btn btn-success" style="width: 130px" onclick="tj()"
+					value="注册">
+				</span>
+			</div>
+			<p>
+				<input type="checkbox" class="check" checked>同意<a
+					class="modalLink" href="#" class="btn btn-default"
+					data-toggle="tooltip" data-html="true" data-placement="top"
+					title="事实是事实">《注册声明》《版权声明》</a>
+			</p>
+
+
+
+		</div>
+	</div>
+
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+	//邮箱验证
+	var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+	function emailgs(txt) {
+		
+		if (!myreg.test(txt.value) || txt.value.length >= 30) {
+			$("#myemail").addClass("err");
+			$("#myemail").attr('placeholder', '邮箱格错误')
+		} else {
+			$("#myemail").removeClass("err");
+		/*	var emyz = $.ajax({
+				type : 'post',
+				url : 'emailpd.aspx',
+				data : {
+					em : txt.value
+				},
+				cache : false,
+				dataType : 'text',
+				success : function(data) {
+					if (data == "y") {
+						$("#empdts").css("display", "none");
+					} else {
+						$("#empdts").css("display", "block");
+					}
+				},
+				error : function() {
+				}
+			});
+		*/
+		}
+		
+	}
+	//验证用户名
+	function yhmok(txt) {
+		if (txt.value.length >= 30 || txt.value.length < 2) {
+			$("#myhm").addClass("err");
+			$("#myhm").attr('placeholder', '用户名长度范围2-30之间')
+		} else {
+			$("#myhm").removeClass("err");
+		}
+	}
+
+	//验证码
+	function yzmfs() {
+		var myemail = $("#myemail").val();
+		if (!myreg.test(myemail) || myemail.length >= 30) {
+			$("#myemail").addClass("err");
+			$("#myemail").attr('placeholder', '邮箱格错误')
+		} else {
+			var yz = $.ajax({
+				type : 'post',
+				url : '/ajax/j_email',
+				data : {
+					em : myemail
+				},
+				cache : false,
+				dataType : 'text',
+				success : function(data) {
+					$("#empdts").css("display", "none");
+					var obj = eval('(' + data + ')');
+					
+					if (obj.code == '200') {
+						$("#bt").html("验证码发送成功");
+					} else if (obj.code == '-101') {
+						$("#empdts").css("display", "block");
+					}
+					else{
+						//其他未知原因暂不考虑
+					}
+				},
+				error : function() {
+				}
+			});
+		}
+
+	}
+	//密码
+	function yzm() {
+		var mpwd1 = $("#pwd1").val();
+		var mpwd2 = $("#pwd2").val();
+		if (mpwd1 != mpwd2) {
+			$("#pwd2").addClass("err");
+			$("#pwd2").attr('placeholder', '两次输入的密码不一直')
+		} else {
+			$("#pwd2").removeClass("err");
+		}
+
+	}
+
+	function tj() {
+		var myemail = $("#myemail").val();
+		var myhm = $("#myhm").val();
+		var myzm = $("#yzm").val();
+
+		var mpwd1 = $("#pwd1").val();
+		var mpwd2 = $("#pwd2").val();
+
+		if (!myreg.test(myemail) || myemail.length >= 30) {
+			$("#myemail").addClass("err");
+			$("#myemail").attr('placeholder', '邮箱格式错误')
+		} else if (myhm.length >= 30 || myhm.length < 2) {
+			$("#myhm").addClass("err");
+			$("#myhm").attr('placeholder', '用户名错误')
+		} else if (mpwd1 != mpwd2 || mpwd2.length < 5) {
+			$("#pwd2").addClass("err");
+			$("#pwd2").attr('placeholder', '密码错误')
+		} else {
+			$.post("/ajax/j_register", {
+				Action : "post",
+				mem : myemail,
+				myh : myhm,
+				myz : myzm,
+				mp1 : mpwd1,
+				mp2 : mpwd2
+			}, function(data) {
+				if (data.code == "200") {
+					alert('恭喜您，注册成功！');
+					//window.location.href = "account/";
+				}
+				else{
+					alert('很抱歉，注册失败！');
+				}
+
+			}, "json");
+
+		}
+
+	}
+</script>
+<include file="Public/footer" />

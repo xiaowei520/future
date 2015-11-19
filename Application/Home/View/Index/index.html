@@ -1,0 +1,141 @@
+<include file="Public/header" />
+
+<div class="container-fluid banner"></div>
+<!--nav-->
+<div
+	class="jz container-fluid nav-bg m0 visible-lg visible-md visible-sm"
+	id="menu_wrap">
+	<div class="container m0" style="position: relative;">
+		<a href="javascript:void(0)" _t_nav="n1" id="an1"><span
+			class="sort"><i class="fa glyphicon glyphicon-sunglasses"></i>
+				&nbsp;XXX <i class="fa glyphicon glyphicon-menu-down"></i></span></a>| <a
+			href="javascript:void(0)" _t_nav="n2" id="an2"><span class="sort"><i
+				class="fa glyphicon glyphicon-send"></i> &nbsp;输入 <i
+				class="fa glyphicon glyphicon-menu-down"></i></span></a>| <a
+			href="http://www.bejson.com/" target="_blank"><span class="sort">JSON在线工具</span></a>
+	</div>
+
+	<div class="container-fluid">
+		<div id="n1" class="nav-zi ty" style="display: none;" _t_nav="n1">
+			<ul class="list-inline container m0">
+				<li><a href="javascript:void(0)"><i
+						class="fa glyphicon glyphicon-send"></i> 背景</a></li>
+
+
+			</ul>
+		</div>
+		<div id="n2" class="nav-zi ty" style="display: none;" _t_nav="n2">
+			<ul class="list-inline container m0">
+				<li><a href="javascript:void(0)"><i
+						class="fa glyphicon glyphicon-send"></i> 拾色器</a></li>
+
+			</ul>
+		</div>
+	</div>
+
+</div>
+<!--end nav-->
+
+<!--主体-->
+<div class="container-fluid m" id="zt">
+	<div class="container m0 bod">
+		<!--左-->
+
+		<div class="col-lg-9 col-md-12 col-sm-12">
+
+			<div class="col-lg-4 col-md-3 col-sm-4">
+				<a href="javascript:void(0)"><img src="ss"></a>
+				<div class="cover-info">
+					<a href="javascript:void(0)"><h4>jquery三环立体式图片切换效果</h4></a> <small>jquery三环立体式图片切换效果</small>
+				</div>
+				<div class="cover-fields">
+					<i class="fa fa-list-ul"></i> &nbsp; 幻灯片和轮播图,图片展示,滑块和旋转
+				</div>
+				<div class="cover-stat">
+					<i class="fa fa-eye"></i><span class="f10"> &nbsp;52</span> <i
+						class="fa fa-heart"></i></i><span class="f10"> &nbsp;0</span>
+					<div class="cover-yh">
+						<a href="mem115567" data-container="body" data-toggle="popover"
+							data-placement="top" data-content="握了颗??草 "> <i
+							class="fa fa-user-secret"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="posts-nav-wrap">
+				<ul class="posts-nav">
+					<li class='next'><a href='index' class='next'>←</a></li>
+				</ul>
+			</div>
+
+
+		</div>
+		<!--end左-->
+
+		<!--右-->
+
+		<div class="col-lg-2 visible-lg" style="width: 200px">
+			<ul class="list-group" style="margin-bottom: 10px">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜索插件.."
+						style="height: 34px; margin-top: 8px;" id="searchtxt"> <span
+						class="input-group-btn">
+						<button class="btn btn-default" type="button" id="seobut"
+							style="border-top-left-radius: 0px; border-bottom-left-radius: 0px; border-left-width: 0px;">
+							<i class="fa glyphicon glyphicon-search"></i>
+						</button>
+					</span>
+					<script type="text/javascript">
+						$("#seobut").click(function() {
+							var seo = $("#searchtxt").val();
+							if (seo.length > 1) {
+								window.location.href = "search?seo=" + seo;
+							}
+						});
+						$('#searchtxt').bind('keypress', function(event) {
+
+							if (event.keyCode == "13") {
+								var seo = $("#searchtxt").val();
+								if (seo.length > 1) {
+									window.location.href = "search?seo=" + seo;
+								}
+							}
+						});
+					</script>
+				</div>
+			</ul>
+
+
+			<ul class="list-group">
+				<a class="list-group-item on" href="jq1-jq1" data-para="time"><i
+					class="fa glyphicon glyphicon-transfer"></i> &nbsp;最新发布</a>
+				<a class="list-group-item" href="jq1-jq4" data-para="comments"><i
+					class="fa glyphicon glyphicon-header"></i> &nbsp;最多收藏</a>
+				<a class="list-group-item" href="jq1-jq2" data-para="comments"><i
+					class="fa glyphicon glyphicon-compressed"></i> &nbsp;最多评论</a>
+				<a class="list-group-item" href="jq1-jq3" data-para="downloads"><i
+					class="fa glyphicon glyphicon-floppy-save"></i> &nbsp;最多下载</a>
+				<a class="list-group-item" href="jq1-jq8" data-para="ie8"><i
+					class="fa glyphicon glyphicon-sound-5-1"></i> &nbsp;兼容IE8</a>
+				<a class="list-group-item" href="jq1-jq6" data-para="ie6"><i
+					class="fa glyphicon glyphicon-thumbs-up"></i> &nbsp;兼容IE6</a>
+			</ul>
+		</div>
+
+		<!--end右-->
+
+
+	</div>
+</div>
+
+<!--end主体-->
+
+
+
+
+
+
+
+<include file="Public/footer" />
