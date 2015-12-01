@@ -25,4 +25,9 @@ return array(
 	'MAIL_SMTP'=>'smtp.163.com', // 邮箱SMTP服务器
 	'MAIL_LOGINNAME'=>'15947617098@163.com', // 邮箱登录帐号
 	'MAIL_PASSWORD'=>'547966965', // 邮箱密码
+	
+
+	'LOG_RECORD' => true, // 开启日志记录
+	'LOG_LEVEL' => 'EMERG,ALERT,CRIT,ERR,WARN,NOTICE,INFO', // 只记录EMERG ALERT CRIT ERR 错误
+	'LOG_FILE_SIZE' => 524288000, // 500MB日志文件切分一次
 );

@@ -10,14 +10,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="Shortcut icon" href="{$static_url}/icon/favicon.ico" />
-<!-- Bootstrap -->
-<link href="{$static_url}/css/bootstrap.min.css" rel="stylesheet"
-	media="screen">
 
 <link href="{$static_url}/css/my.css" rel="stylesheet" media="screen">
-<script src="{$static_url}/js/jquery.js"></script>
 
-<script src="{$static_url}/js/bootstrap.min.js"></script>
+
+
+<!--  免费cdn bootstrap -->
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
 <script>
 	var n = 0;
 </script>
@@ -25,20 +37,8 @@
 
 <!-- IE8下 ，[firefox- 40.0.3]好坑的一个BUG 醉了。 已阻止跨源请求：同源策略禁止读取位于 http://localhost:4000/Public/default/fonts/glyphicons-halflings-regular.woff 的远程资源。（原因：CORS 头缺少 'Access-Control-Allow-Origin'）。 -->
 <style type="text/css">
-@font-face {
-	font-family: 'Glyphicons Halflings';
-	src: url(/Public/default/fonts/glyphicons-halflings-regular.eot);
-	src: url(/Public/default/fonts/glyphicons-halflings-regular.eot?#iefix)
-		format('embedded-opentype'),
-		url(/Public/default/fonts/glyphicons-halflings-regular.woff2)
-		format('woff2'),
-		url(/Public/default/fonts/glyphicons-halflings-regular.woff)
-		format('woff'),
-		url(/Public/default/fonts/glyphicons-halflings-regular.ttf)
-		format('truetype'),
-		url(/Public/default/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular)
-		format('svg')
-}
+
+
 </style>
 
 </head>

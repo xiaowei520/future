@@ -93,7 +93,7 @@ function login() {
         $("#pw").css("background-color", "#ffdfdf");
     }
 //先去掉正则判断d1==1 && d2==1
-    if (1) {
+    if (d1==1 && d2==1) {
         $("#pw").removeClass("dou");
         var yz = $.ajax({
             type: 'post',
@@ -103,7 +103,7 @@ function login() {
             dataType: 'text',
             success: function (data) {
 				 var obj=eval('('+data+')');  
-				 alert(obj.message);
+				// alert(obj.message);
                 if (obj.code == '200') {
 						
                     window.location.href = window.location;
