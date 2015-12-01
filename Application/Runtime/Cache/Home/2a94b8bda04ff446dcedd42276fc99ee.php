@@ -43,7 +43,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".navbar-example">
+<body data-spy="scroll" data-target=".navbar-example" style="padding-bottom:50px;">
 
 	<!--nav-->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -284,7 +284,7 @@
 
 
 <nav class="copyright navbar-fixed-bottom" role="navigation"
-	style="background: #111; font-size: 13px; text-align: center; color: #555555; padding-top: 28px; padding-bottom: 28px; border-top: 1px solid #303030;">
+	style="margin-top:100px;background: #111; font-size: 13px; text-align: center; color: #555555; padding-top: 28px; padding-bottom: 28px; border-top: 1px solid #303030;">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12" style="align: center; color: #ffffff;">
