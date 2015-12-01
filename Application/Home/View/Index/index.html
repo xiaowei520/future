@@ -42,26 +42,27 @@
 		<!--左-->
 
 		<div class="col-lg-9 col-md-12 col-sm-12">
-
-			<div class="col-lg-4 col-md-3 col-sm-4">
-				<a href="javascript:void(0)"><img src="ss"></a>
-				<div class="cover-info">
-					<a href="javascript:void(0)"><h4>jquery三环立体式图片切换效果</h4></a> <small>jquery三环立体式图片切换效果</small>
-				</div>
-				<div class="cover-fields">
-					<i class="fa fa-list-ul"></i> &nbsp; 幻灯片和轮播图,图片展示,滑块和旋转
-				</div>
-				<div class="cover-stat">
-					<i class="fa fa-eye"></i><span class="f10"> &nbsp;52</span> <i
-						class="fa fa-heart"></i></i><span class="f10"> &nbsp;0</span>
-					<div class="cover-yh">
-						<a href="mem115567" data-container="body" data-toggle="popover"
-							data-placement="top" data-content="握了颗??草 "> <i
-							class="fa fa-user-secret"></i>
-						</a>
+			<volist name="index_img_url" id="vo">
+				<div class="col-lg-4 col-md-3 col-sm-4">
+					<a href="javascript:void(0)" > <div class="thumbnail"> <img src="Public/default/img/index/{$vo.url}" style="width:100%;height:180px;"></div></a>
+					<div class="cover-info">
+						<a href="javascript:void(0)"><h4>{$vo.name}</h4></a> <small>{$vo.name}</small>
+					</div>
+					<div class="cover-fields">
+						<i class="fa fa-list-ul"></i> &nbsp; {$vo.desc}
+					</div>
+					<div class="cover-stat">
+						<i class="fa fa-eye"></i><span class="f10"> &nbsp;52</span> <i
+							class="fa fa-heart"></i></i><span class="f10"> &nbsp;0</span>
+						<div class="cover-yh">
+							<a href="mem115567" data-container="body" data-toggle="popover"
+								data-placement="top" data-content="握了颗??草 "> <i
+								class="fa fa-user-secret"></i>
+							</a>
+						</div>
 					</div>
 				</div>
-			</div>
+			</volist>
 
 
 			<div class="posts-nav-wrap">
