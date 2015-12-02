@@ -39,7 +39,7 @@ class BaseController extends Controller
 			}
 		}
 		//增加cdn_url变量
-		$this->static_url = C("CDN_URL") . "/Public/default";
+		$this->static_url = C("CDN_URL") . "/Public/default/";
 
 
 	}
