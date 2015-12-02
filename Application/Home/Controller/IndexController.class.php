@@ -12,11 +12,36 @@ class IndexController extends BaseController {
 		
 		// 首页图片信息的路径信息问题。由于还未确定应该是什么类型的。所以先人为写数组
 		$index_img_list = array (
-			0 =>array('url' => '2.jpeg' ,'name' =>'p1','desc' =>'图片1'),
-			1 =>array('url' => '2.jpeg','name' =>'p2','desc' =>'图片2'),
-			2 =>array('url' => '3.jpeg','name' =>'p3','desc' =>'图片3'),	
+				0 => array (
+						'url' => '2.jpeg',
+						'name' => 'p1',
+						'desc' => '图片1' 
+				),
+				1 => array (
+						'url' => '2.jpeg',
+						'name' => 'p2',
+						'desc' => '图片2' 
+				),
+				2 => array (
+						'url' => '3.jpeg',
+						'name' => 'p3',
+						'desc' => '图片3' 
+				),
+				3 => array (
+						'url' => '3.jpeg',
+						'name' => 'p3',
+						'desc' => '图片3' 
+				) 
 		);
-		$this->index_img_url = $index_img_list;
+		
+		// 分页显示数据
+		$count = count ( $index_img_list );
+		var_dump($count);
+		$Page = new \Think\Page ( $count, 3 );
+		$show = $Page->show (); // 分页显示输出
+		$this->pages = $show;
+		
+		$this->index_img_url = array_slice($index_img_list, $Page->firstRow,$Page->listRows );
 		
 		// 初始化首页静态图片的位置
 		// $index_img_url = "";
