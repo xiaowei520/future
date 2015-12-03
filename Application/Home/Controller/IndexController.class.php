@@ -36,7 +36,12 @@ class IndexController extends BaseController {
 		
 		// 分页显示数据
 		$count = count ( $index_img_list );
-		var_dump($count);
+		//var_dump($count);
+		
+		
+
+		
+		
 		$Page = new \Think\Page ( $count, 3 );
 		$show = $Page->show (); // 分页显示输出
 		$this->pages = $show;
