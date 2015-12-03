@@ -97,7 +97,7 @@ function login() {
         $("#pw").removeClass("dou");
         var yz = $.ajax({
             type: 'post',
-            url: 'account/login',
+            url: '/account/login',
             data: { em: em, pw: pw },
             cache: false,
             dataType: 'text',
@@ -119,10 +119,10 @@ function login() {
 }
 function myout() {
     if (n == 1) {
-        window.location.href = "account/logout";
+        window.location.href = "/account/logout";
 		
     } else {
-        window.location.href = "account/logout";
+        window.location.href = "/account/logout";
     }
     
 }
