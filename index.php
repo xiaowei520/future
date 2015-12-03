@@ -20,6 +20,9 @@ define('APP_DEBUG',True);
 //配置文件
 define('APP_STATUS', 'config');
 
+define('APP_NAME', 'future');
+
+
 define('BIND_MODULE', 'Home');
 // 定义应用目录
 define('APP_PATH','./Application/');
