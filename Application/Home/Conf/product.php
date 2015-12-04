@@ -1,7 +1,7 @@
 <?php
 return array(
 	//配置静态文件存放的CDN
-	'CDN_URL' => 'http://114.215.146.54/future/',
+	'CDN_URL' => 'http://114.215.146.54/',
 	//配置session存储方式
 	//'SESSION_TYPE'=>'Memcache',
 	//pc网站加密解密key
@@ -14,7 +14,7 @@ return array(
 	'TITLE' => "格来云游戏CLOUD GAMES-你的云端超级游戏主机-动视云科技",
 		
 	//网站url
-	'SITE_URL' => "http://114.215.146.54/future/",
+	'SITE_URL' => "http://114.215.146.54/",
 	'URL_MODEL' => 1,
 		
 	
