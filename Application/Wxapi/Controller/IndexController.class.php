@@ -11,11 +11,11 @@ class IndexController extends Controller {
 	protected $appid = 'wx025510256321dd39';
 	protected $appsecret = 'd4624c36b6795d1d99dcf0547af5443d';
 	
-	// 获取微信access_token
+	// 获取微信access_token----get请求
 	public function get_access_token() {
 		$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $this->appid . '&secret=' . $this->appsecret;
 		
-		$test = $this->http_post ( $url, $data );
+		$test = $this->http_get ( $url);
 		
 		var_dump ( $test );
 	}
@@ -39,6 +39,29 @@ class IndexController extends Controller {
 		if (intval ( $aStatus ["http_code"] ) == 200) {
 			return $sContent;
 		} else {
+			return false;
+		}
+	}
+	
+	/**
+	 * GET 请求
+	 * @param string $url
+	 */
+	private function http_get($url){
+		$oCurl = curl_init();
+		if(stripos($url,"https://")!==FALSE){
+			curl_setopt($oCurl, CURLOPT_SSL_VERIFYPEER, FALSE);
+			curl_setopt($oCurl, CURLOPT_SSL_VERIFYHOST, FALSE);
+			curl_setopt($oCurl, CURLOPT_SSLVERSION, 1); //CURL_SSLVERSION_TLSv1
+		}
+		curl_setopt($oCurl, CURLOPT_URL, $url);
+		curl_setopt($oCurl, CURLOPT_RETURNTRANSFER, 1 );
+		$sContent = curl_exec($oCurl);
+		$aStatus = curl_getinfo($oCurl);
+		curl_close($oCurl);
+		if(intval($aStatus["http_code"])==200){
+			return $sContent;
+		}else{
 			return false;
 		}
 	}
