@@ -25,6 +25,7 @@ class IndexController extends Controller {
 		$url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $this->appid . '&secret=' . $this->appsecret;
 		
 		$test = $this->http_get ( $url);
+		return $test;
 	}
 	
 	// 获取微信access_token----get请求
