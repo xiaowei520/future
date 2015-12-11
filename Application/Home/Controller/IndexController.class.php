@@ -14,23 +14,27 @@ class IndexController extends BaseController {
 		$index_img_list = array (
 				0 => array (
 						'url' => '2.jpeg',
-						'name' => 'p1',
-						'desc' => '图片1' 
+						'name' => '日历',
+						'desc' => '可以记录大姨妈，行程表',
+						'href' => '/function/open_rili',
 				),
 				1 => array (
 						'url' => '2.jpeg',
-						'name' => 'p2',
-						'desc' => '图片2' 
+						'name' => '待开发',
+						'desc' => '待开发' ,
+						'href' => '/function/open_rili',
 				),
 				2 => array (
 						'url' => '3.jpeg',
-						'name' => 'p3',
-						'desc' => '图片3' 
+						'name' => '待开发',
+						'desc' => '待开发' ,
+						'href' => '/function/open_rili',
 				),
 				3 => array (
 						'url' => '3.jpeg',
-						'name' => 'p3',
-						'desc' => '图片3' 
+						'name' => '待开发',
+						'desc' => '待开发' ,
+						'href' => '/function/open_rili',
 				) 
 		);
 		

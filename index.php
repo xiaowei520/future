@@ -18,7 +18,7 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 define('APP_DEBUG',True);
 
 //配置文件
-define('APP_STATUS', 'product');
+define('APP_STATUS', 'develop');
 
 define('APP_NAME', 'future');
 
