@@ -1,6 +1,7 @@
 <include file="Public/header" />
 
-<link href="{$static_url}/css/rili-style.css" rel="stylesheet" media="screen">
+<link href="{$static_url}/css/rili-style.css" rel="stylesheet"
+	media="screen">
 
 <script src="{$static_url}/js/rili-js.js"></script>
 
@@ -18,38 +19,77 @@
 //day1  day2 day3 day4  day5  day6  day7
 //day1  day2 day3 day4  day5  day6  day7
 -->
-<div class="aboluo-w-700" style="margin:60px auto;">
-<div class="aboluo-leftdiv">
-<div class="aboluo-tools">
-<div class="aboluo-calendar-select-year"></div>
-<div class="aboluo-calendar-month">
-<a class="aboluo-month-a-perv" href="javascript:;">&lt; </a>
-<a class="aboluo-month-a-next" href="javascript:;"> &gt;</a>
+<div class="aboluo-w-700" style="margin: 60px auto;">
+	<div class="aboluo-leftdiv">
+		<div class="aboluo-tools">
+			<div class="aboluo-calendar-select-year"></div>
+			<div class="aboluo-calendar-month">
+				<a class="aboluo-month-a-perv" href="javascript:;">&lt; </a> <a
+					class="aboluo-month-a-next" href="javascript:;"> &gt;</a>
+			</div>
+			<input type="button" class="aboluo-toToday" value="返回今天" />
+		</div>
+		<div class="aboluo-rilidiv">
+			<table class="aboluo-rilitable" cellspacing="0" cellpadding="0">
+				<thead class="aboluo-rilithead">
+					<tr>
+						<th>一
+						</td>
+						<th>二
+						</td>
+						<th>三
+						</td>
+						<th>四
+						</td>
+						<th>五
+						</td>
+						<th style="color: red;">六
+						</td>
+						<th style="color: red;">日
+						</td>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</div>
+	<div class="aboluo-rightdiv">
+		<p class="aboluo-xssj">
+		<p>
+		<p class="aboluo-currday"></p>
+		<p class="aboluo-ssjjr"></p>
+		<p class="aboluo-xsmx"></p>
+	</div>
 </div>
-<input type="button" class="aboluo-toToday" value="返回今天" />
-</div>
-<div class="aboluo-rilidiv">
-<table class="aboluo-rilitable" cellspacing="0" cellpadding="0" >
-<thead class="aboluo-rilithead">
-	<tr>
-		<th>一</td>
-		<th>二</td>
-		<th>三</td>
-		<th>四</td>
-		<th>五</td>
-		<th style="color:red;">六</td>
-		<th style="color:red;">日</td>
-	</tr>
-</thead>
-</table>
-</div>
-</div>
-<div class="aboluo-rightdiv">
-<p class="aboluo-xssj"><p>
-<p class="aboluo-currday"></p>
-<p class="aboluo-ssjjr"></p>
-<p class="aboluo-xsmx"></p>
-</div>
+
+<!--  视频开始 -->
+<div>
+	
+ <section class="p_bg EasySlide-slides" style="display:block" index="0">
+    	<div gindex="0" class="EasySlide-groups">
+            <div class="p1_card">
+                <div class="p1_video_card">
+                    <div class="p1_video">
+                        <video id="my-video" class="video-js" controls preload="auto" poster="images/video_pic.jpg" data-setup="{}" width="558" height="312">
+                        <source src="http://webtest1.gloud.cn/website/intro/web/video.mp4" type='video/mp4'>
+                        <p class="vjs-no-js">
+                          To view this video please enable JavaScript, and consider upgrading to a web browser that
+                          <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                      </video>
+
+                       <div class="p1_play" id="cover-video"><img src="images/play.png" alt="" /></div>
+                    </div>
+                    <div class="p1_video_ico" style="-webkit-animation:pulse_pic 1.4s linear infinite alternate;-moz-animation:pulse_pic 1.4s linear infinite alternate;-ms-animation:pulse_pic 1.4s linear infinite alternate;animation:pulse_pic 1.4s linear infinite alternate;">
+                        <img src="images/video_icon.png" alt="" />
+                    </div>
+                </div>
+                <div class="p1_tips EasySlide-animate-h5" style="-webkit-animation:opacity_a 1s .2s ease both;-moz-animation:opacity_a 1s .2s ease both;animation:opacity_a 1s .2s ease both; ">
+                    <img src="images/p1_right.png" alt="" />
+                    <a href="http://cdnuc.51ias.com/update/gloudlatest.apk" class="p1_tips_down" title="安卓客户端下载">安卓客户端下载</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 
