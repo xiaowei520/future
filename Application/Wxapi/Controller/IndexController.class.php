@@ -14,6 +14,7 @@ class IndexController extends Controller {
 		$weObj->valid ();
 		
 		$type = $weObj->getRev ()->getRevType ();
+		
 		switch ($type) {
 			case Wechat::MSGTYPE_TEXT :
 				$weObj->text ( "hello, I'm wechat" )->reply ();
@@ -29,7 +30,7 @@ class IndexController extends Controller {
 				$weObj->text ( "help info" )->reply ();
 		}
 		
-		$this->show ( '<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>[ 您现在访问的是Home模块的Index控制器 ]</div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>', 'utf-8' );
+	//	$this->show ( '<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>[ 您现在访问的是Home模块的Index控制器 ]</div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>', 'utf-8' );
 	}
 	protected $appid = 'wx025510256321dd39';
 	protected $appsecret = 'd4624c36b6795d1d99dcf0547af5443d';

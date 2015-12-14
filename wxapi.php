@@ -9,25 +9,25 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-// Ó¦ÓÃÈë¿ÚÎÄ¼þ
+// Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 
-// ¼ì²âPHP»·¾³
+// ï¿½ï¿½ï¿½PHPï¿½ï¿½ï¿½ï¿½
 if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
-// ¿ªÆôµ÷ÊÔÄ£Ê½ ½¨Òé¿ª·¢½×¶Î¿ªÆô ²¿Êð½×¶Î×¢ÊÍ»òÕßÉèÎªfalse
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä£Ê½ ï¿½ï¿½ï¿½é¿ªï¿½ï¿½ï¿½×¶Î¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½×¶ï¿½×¢ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½Îªfalse
 define('APP_DEBUG',True);
 
-//ÅäÖÃÎÄ¼þ
+//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 define('APP_STATUS', 'config');
 
 define('APP_NAME', 'future');
 
 
 define('BIND_MODULE', 'Wxapi');
-// ¶¨ÒåÓ¦ÓÃÄ¿Â¼
+// ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½Ä¿Â¼
 define('APP_PATH','./Application/');
-
-// ÒýÈëThinkPHPÈë¿ÚÎÄ¼þ
+define('token','tokenaccesskey');
+// ï¿½ï¿½ï¿½ï¿½ThinkPHPï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 require './ThinkPHP/ThinkPHP.php';
 
-// Ç×^_^ ºóÃæ²»ÐèÒªÈÎºÎ´úÂëÁË ¾ÍÊÇÈç´Ë¼òµ¥
+// ï¿½ï¿½^_^ ï¿½ï¿½ï¿½æ²»ï¿½ï¿½Òªï¿½ÎºÎ´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½
