@@ -7,17 +7,25 @@ use Org\Util\Wechat;
 
 class IndexController extends Controller {
 	
-	public function index() {
-		$options = C('options');
-		var_dump($options);
-		$weObj = new Wechat ( $options );
-		$weObj->valid ();
+	public function _initialize()
+	{
+
+		$options_1 = C('options');
+		$this->wchat_options_1 = $options_1;
+	
+		$this->wchat_obj = new \Org\Util\Wechat ($this->wchat_options_1);
 		
-		$type = $weObj->getRev ()->getRevType ();
+	}
+	
+	public function index() {
+
+		$this->wchat_obj->valid ();
+		
+		$type = $this->wchat_obj->getRev ()->getRevType ();
 		
 		switch ($type) {
 			case Wechat::MSGTYPE_TEXT :
-				$weObj->text ( "hello, I'm wechat" )->reply ();
+				$this->wchat_obj->text ( "hello, I'm wechat" )->reply ();
 				exit ();
 				break;
 			case Wechat::MSGTYPE_EVENT :
@@ -27,7 +35,7 @@ class IndexController extends Controller {
 				
 				break;
 			default :
-				$weObj->text ( "help info" )->reply ();
+				$this->wchat_obj->text ( "help info" )->reply ();
 		}
 		
 	//	$this->show ( '<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} body{ background: #fff; font-family: "微软雅黑"; color: #333;font-size:24px} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.8em; font-size: 36px }</style><div style="padding: 24px 48px;"> <h1>:)</h1><p>欢迎使用 <b>ThinkPHP</b>！</p><br/>[ 您现在访问的是Home模块的Index控制器 ]</div><script type="text/javascript" src="http://tajs.qq.com/stats?sId=9347272" charset="UTF-8"></script>', 'utf-8' );
