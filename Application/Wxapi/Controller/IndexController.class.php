@@ -57,13 +57,13 @@ class IndexController extends Controller {
 				'button' => array (
 						array (
 								'type' => 'view',
-								'name' => urlencode("格来社区"),
-								"url" => 'http://m.wsq.qq.com/264117624' 
+								'name' => urlencode("qq空间"),
+								"url" => 'http://user.qzone.qq.com/547966965/infocenter?ptsig=pqxc6MoLV4UcgNBvh2oXiSe-D8HyHN-S2PNqaCdSv3M_' 
 						),
 						array (
 								'type' => 'view',
-								'name' => urlencode('新版说明'),
-								"url" => 'http://mp.weixin.qq.com/s?__biz=MzA4OTI1ODU5NA==&mid=401199427&idx=1&sn=35d675875311abff3db08beb1990a897&scene=18#wechat_redirect' 
+								'name' => urlencode('无聊'),
+								"url" => 'http://114.215.146.54/function/open_rili' 
 						),
 						array (
 								'name' => urlencode('我的'),
@@ -75,13 +75,13 @@ class IndexController extends Controller {
 // 										),
 										array (
 												'type' => 'view',
-												'name' => urlencode('下载安装'),
-												"url" => 'http://m.gloud.cn'
+												'name' => urlencode('视频'),
+												"url" => 'http://114.215.146.54/function/open_rili'
 										),
 										array (
 												'type' => 'view',
-												'name' => urlencode('官方微博'),
-												"url" => 'http://weibo.com/u/5118628430'
+												'name' => urlencode('视频'),
+												"url" => 'http://114.215.146.54/function/open_rili'
 										),
 								),
 								
