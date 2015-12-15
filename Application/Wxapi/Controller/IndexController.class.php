@@ -10,7 +10,8 @@ class IndexController extends Controller {
 	public function _initialize()
 	{
 		//加载孙伟的应用配置，订阅号
-		$options_1 = C('options1');
+		//再次切换回到测试公众号的  功能，订阅号功能太少了
+		$options_1 = C('options');
 		$this->wchat_options_1 = $options_1;
 	
 		$this->wchat_obj = new \Org\Util\Wechat ($this->wchat_options_1);
@@ -49,6 +50,46 @@ class IndexController extends Controller {
 		$menu = $this->wchat_obj->getMenu();
 		var_dump(json_encode($menu,true));
 		
+	}
+	public function createMenu(){
+
+		$newmenu = array (
+				'button' => array (
+						array (
+								'type' => 'view',
+								'name' => urlencode("格来社区"),
+								"url" => 'http://m.wsq.qq.com/264117624' 
+						),
+						array (
+								'type' => 'view',
+								'name' => urlencode('新版说明'),
+								"url" => 'http://mp.weixin.qq.com/s?__biz=MzA4OTI1ODU5NA==&mid=401199427&idx=1&sn=35d675875311abff3db08beb1990a897&scene=18#wechat_redirect' 
+						),
+						array (
+								'name' => urlencode('我的'),
+								'sub_button' => array (
+// 										array(
+// 											'type' => 'view',
+// 											'name' => urlencode('常见问题'),
+// 											"url" => 'http://weibo.com/u/5118628430' 
+// 										),
+										array (
+												'type' => 'view',
+												'name' => urlencode('下载安装'),
+												"url" => 'http://m.gloud.cn'
+										),
+										array (
+												'type' => 'view',
+												'name' => urlencode('官方微博'),
+												"url" => 'http://weibo.com/u/5118628430'
+										),
+								),
+								
+						) 
+				) 
+		);
+		$result = $this->wchat_obj->createMenu($newmenu);
+		var_dump($result);
 	}
 
 	
