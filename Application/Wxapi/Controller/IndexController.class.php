@@ -9,14 +9,15 @@ class IndexController extends Controller {
 	
 	public function _initialize()
 	{
-
-		$options_1 = C('options');
+		//加载孙伟的应用配置，订阅号
+		$options_1 = C('options1');
 		$this->wchat_options_1 = $options_1;
 	
 		$this->wchat_obj = new \Org\Util\Wechat ($this->wchat_options_1);
 		
 	}
 	
+	//微信服务器的推送
 	public function index() {
 
 		$this->wchat_obj->valid ();
@@ -25,6 +26,7 @@ class IndexController extends Controller {
 		
 		switch ($type) {
 			case Wechat::MSGTYPE_TEXT :
+				
 				$this->wchat_obj->text ( "hello, I'm wechat" )->reply ();
 				exit ();
 				break;
