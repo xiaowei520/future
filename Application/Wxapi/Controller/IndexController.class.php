@@ -52,6 +52,8 @@ class IndexController extends Controller {
 		$memcache = Memcached::getInstance ();
 		$memcache_key = $this->wchat_obj->getRevFrom ();
 		
+		$this->wchat_obj->text ( $rev_content )->reply ();
+		
 		$relpy_data = $this->set_reply_data ();
 		// 缓存不存在或者下一跳是null第一次进入,或者丢失
 		if (! $memcache->get ( $memcache_key )) {
