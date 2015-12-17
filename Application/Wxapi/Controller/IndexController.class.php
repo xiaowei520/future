@@ -60,7 +60,7 @@ class IndexController extends Controller {
 		if (! S($memcache_key)) {
 			
 			foreach ( $relpy_data ['A'] as $key => $value ) {
-				if (! strpos ( $rev_content, $value ['key'] )) {
+				if ( strpos ( $rev_content, $value ['key'] != false )) {
 					// 检索到了
 					$this->wchat_obj->text ( $value ['value'] )->reply ();
 					//$memcache->set ( $memcache_key, $value ['next'] );
@@ -73,7 +73,7 @@ class IndexController extends Controller {
 			$position = S($memcache_key);
 			
 			foreach ( $relpy_data [$position] as $key => $value ) {
-				if (! strpos ( $rev_content, $value ['key'] )) {
+				if ( strpos ( $rev_content, $value ['key'] ) != false) {
 					// 检索到了
 					$this->wchat_obj->text ( $value ['value'] )->reply ();
 					//$memcache->set ( $memcache_key, $value ['next'] );
