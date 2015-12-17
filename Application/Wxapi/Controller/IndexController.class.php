@@ -49,33 +49,35 @@ class IndexController extends Controller {
 		// $test = $this->wchat_obj->getRevData();
 		$rev_content = $this->wchat_obj->getRevContent ();
 		// 实例化memcached
-		$memcache = Memcached::getInstance ();
+	//	$memcache = Memcached::getInstance ();
 		//$memcache = new Memcache ();
 		$memcache_key = $this->wchat_obj->getRevFrom ();
-		
+		;
 		//$this->wchat_obj->text ( $rev_content )->reply ();
 		
 		$relpy_data = $this->set_reply_data ();
 		// 缓存不存在或者下一跳是null第一次进入,或者丢失
-		if (! $memcache->get ( $memcache_key )) {
+		if (! S($memcache_key)) {
 			
 			foreach ( $relpy_data ['A'] as $key => $value ) {
 				if (! strstr ( $rev_content, $value ['key'] )) {
 					// 检索到了
 					$this->wchat_obj->text ( $value ['value'] )->reply ();
-					$memcache->set ( $memcache_key, $value ['next'] );
+					//$memcache->set ( $memcache_key, $value ['next'] );
+					S($memcache_key, $value ['next']);
 					exit ();
 				}
 			}
 		} else {
 			
-			$position = $memcache->get ( $memcache_key );
+			$position = S($memcache_key);
 			
 			foreach ( $relpy_data [$position] as $key => $value ) {
 				if (! strstr ( $rev_content, $value ['key'] )) {
 					// 检索到了
 					$this->wchat_obj->text ( $value ['value'] )->reply ();
-					$memcache->set ( $memcache_key, $value ['next'] );
+					//$memcache->set ( $memcache_key, $value ['next'] );
+					S($memcache_key, $value ['next']);
 					exit ();
 				}
 			}
@@ -87,6 +89,11 @@ class IndexController extends Controller {
 		
 		var_dump( C('MEMCACHE_HOST'));
 		var_dump ( C ( 'options' ));
+		
+		
+		$mc = S('ss','22');
+		$mc1 = S('ss');
+		var_dump($mc1);
 		
 		$memcache = Memcached::getInstance ();
 		//$memcache = new Memcache ();
