@@ -83,6 +83,45 @@ class IndexController extends Controller {
 		// 一直没找到对应的KEY
 		$this->wchat_obj->text ( "自动回复机制,关键词1，2，3，4，5" )->reply ();
 	}
+	public function test(){
+		
+		var_dump( C('MEMCACHE_HOST'));
+		var_dump ( C ( 'options' ));
+		
+		$memcache = Memcached::getInstance ();
+		//$memcache = new Memcache ();
+		$memcache_key = 1;
+		$memcache->set ( $memcache_key, '2' );
+	var_dump($memcache->get ( $memcache_key ));
+		if (! $memcache->get ( $memcache_key )) {
+				
+// 			foreach ( $relpy_data ['A'] as $key => $value ) {
+// 				if (! strstr ( $rev_content, $value ['key'] )) {
+// 					// 检索到了
+// 					$this->wchat_obj->text ( $value ['value'] )->reply ();
+// 					$memcache->set ( $memcache_key, $value ['next'] );
+// 					exit ();
+// 				}
+// 			}
+var_dump('sdd');
+
+		} else {
+				
+			$position = $memcache->get ( $memcache_key );
+				
+// 			foreach ( $relpy_data [$position] as $key => $value ) {
+// 				if (! strstr ( $rev_content, $value ['key'] )) {
+// 					// 检索到了
+// 					$this->wchat_obj->text ( $value ['value'] )->reply ();
+// 					$memcache->set ( $memcache_key, $value ['next'] );
+// 					exit ();
+// 				}
+// 			}
+
+			var_dump('sdd11');
+		}
+	}
+	
 	public function set_reply_data() {
 		$data = array ();
 		$data ['A'] = array (

@@ -31,7 +31,8 @@ return array(
 	'LOG_LEVEL' => 'EMERG,ALERT,CRIT,ERR,WARN,NOTICE,INFO', // 只记录EMERG ALERT CRIT ERR 错误
 	'LOG_FILE_SIZE' => 524288000, // 500MB日志文件切分一次
 	
-		
-	'MEMCACHED_HOST' => array('127.0.0.2','127.0.0.2'),
-	'MEMCACHED_PORT' => array('11211','11212'),
+	//memcache 的配置
+	'MEMCACHE_HOST' => array('127.0.0.1','127.0.0.1'),
+	'MEMCACHE_PORT' => array('11211','11212'),
+   //memcached 的配置
 );
