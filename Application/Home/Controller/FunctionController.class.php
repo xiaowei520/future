@@ -11,10 +11,7 @@ use Org\Util\Response;
  */
 class FunctionController extends BaseController {
 	
-	public function _initialize(){
-		
-		$this->function_static = '';
-	} 
+
 	public function open_rili(){
 		$this->display();
 	}
