@@ -49,8 +49,8 @@ class IndexController extends Controller {
 		// $test = $this->wchat_obj->getRevData();
 		$rev_content = $this->wchat_obj->getRevContent ();
 		// 实例化memcached
-		//$memcache = Memcached::getInstance ();
-		$memcache = new Memcache ();
+		$memcache = Memcached::getInstance ();
+		//$memcache = new Memcache ();
 		$memcache_key = $this->wchat_obj->getRevFrom ();
 		
 		//$this->wchat_obj->text ( $rev_content )->reply ();
