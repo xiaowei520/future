@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Basic -->
+		<meta charset="utf-8">
+		<title>AWEBlog - Responsive HTML5 Template</title>		
+		<meta name="keywords" content="HTML5 Template" />
+		<meta name="description" content="AWEBlog - Responsive HTML5 Template">
+		<meta name="author" content="pixelgeeklab.com">
+
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<!-- Web Fonts  -->
+		<link href='http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700,400italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+		<!-- Vendor CSS -->
+		<link rel="stylesheet" href="{$static_url}/vendor/fontawesome/css/font-awesome.css">
+		<link rel="stylesheet" href="{$static_url}/vendor/magnific-popup/magnific-popup.css" media="screen">
+		<link rel="stylesheet" href="{$static_url}/vendor/owlcarousel/owl.carousel.min.css" media="screen">
+		<link rel="stylesheet" href="{$static_url}/vendor/owlcarousel/owl.theme.default.min.css" media="screen">
+
+		<!-- Theme CSS -->
+		<link rel="stylesheet" href="{$static_url}/css/theme.css">
+		<link rel="stylesheet" href="{$static_url}/css/theme-animate.css">
+		
+		<!-- Style Switcher-->
+		<link rel="stylesheet" href="{$static_url}/style-switcher/css/style-switcher.css">
+		<link href="{$static_url}/css/colors/default/style.css" rel="stylesheet" id="layoutstyle">
+
+		<!-- Head libs -->
+		<script src="{$static_url}/vendor/modernizr/modernizr.js"></script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="{$static_url}/https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="{$static_url}/https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div id="wrapper">
+			<header id="header">
+				<div class="head">
+					<div class="container">
+						<h1 class="logo"><a href="{$static_url}/index.html" title="AweHouse"><img src="{$static_url}/images/food-logo-black.png" alt="Food Recipes"></a></h1>
+					</div>	
+				</div>	
+				<nav class="navmain">
+					<div class="container">
+						<div class="navbar-collapse navbar-main navbar-main-center collapse" id="navbar">
+							<a data-uk-offcanvas="" class="uk-navbar-toggle btn-toggle" href="{$static_url}/#offcanvas">
+								<span class="sr-only">Toggle navigation</span>
+								<i class="fa fa-bars"></i>
+							</a>
+							<ul class="nav navbar-nav">
+								<li class="dropdown active">
+									<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="{$static_url}/#">首页</a>
+									<ul role="menu" class="dropdown-menu">
+										<li><a href="{$static_url}/index-fullwidth.html">Home Full Width</a></li>
+										<li><a href="{$static_url}/index-list-fullwidth.html">Home List Full Width</a></li>
+										<li><a href="{$static_url}/index-list-sidebar.html">Home List Sidebar</a></li>
+										<li><a href="{$static_url}/index-masonry-fullwidth.html">Home Masonry Full Width</a></li>
+										<li><a href="{$static_url}/index-masonry-sidebar.html">Home Masonry Sidebar</a></li>
+										<li><a href="{$static_url}/index-slides-fullwidth.html">Home Slides Full Width</a></li>
+										<li><a href="{$static_url}/index-slideshow-fullwidth-sidebar.html">Home Slideshow Full Width Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="{$static_url}/category.html">展会</a></li>
+								<li><a href="{$static_url}/post-single.html">服务</a></li>
+								<li class="dropdown">
+									<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="{$static_url}/#">创意设计</a>
+									<ul role="menu" class="dropdown-menu">
+										<li><a href="{$static_url}/post-single.html">公司营销</a></li>
+									</ul>
+								</li>
+								<li><a href="{$static_url}/author.html">媒体</a></li>
+								<li><a href="{$static_url}/author.html">下载手机版</a></li>
+							</ul>
+						</div>	
+					</div>	
+				</nav>	
+			</header>
+			<div class="main">
+				<div class="container">
+					<div id="slideshow">
+						<div class="owl-carousel carousel-midnav" data-plugin-options='{"items": 4, "nav": false}'>						
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-1.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">一起吃好吃的，会战好好玩</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-2.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">很多摊贩值得参观</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-3.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">有好的作品大家看</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-4.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">美好的展商大家支持</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-5.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>						
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-2.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-3.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-5.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-4.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-1.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>							
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-5.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-4.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-3.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-2.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+							<div class="slide-item">
+								<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-1.jpg" alt=""></a></div>
+								<div class="post-excerpt"><h4><a href="{$static_url}/#">展商今年很多</a></h4></div>
+							</div>
+						</div>					
+					</div>
+					<div class="row">
+						<div class="col-md-8 main-content">	
+							<div class="posts">
+								<article class="post post-large">
+									<div class="post-image">
+										<div class="owl-carousel carousel-midnav" data-plugin-options='{"items": 1, "nav": true, "dots": false}'>
+											<div class="item"><img class="img-responsive" src="{$static_url}/images/post/demo-item-1.jpg" alt="Blog">
+												<div class="item-caption">
+													<p><small>Caption here eaque ipsa quae</small></p>
+												</div>
+											</div>
+											<div class="item"><img class="img-responsive" src="{$static_url}/images/post/demo-item-2.jpg" alt="Blog">
+												<div class="item-caption">
+													<p><small>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</small></p>
+												</div>
+											</div>
+											<div class="item"><img class="img-responsive" src="{$static_url}/images/post/demo-item-3.jpg" alt="Blog">
+												<div class="item-caption">
+													<p><small>Voluptatem accusantium doloremque laudantium</small></p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="post-head">
+										<span class="post-cat"><a href="{$static_url}/#">Travel</a></span>
+										<h2><a href="{$static_url}/post-single.html">一起吃好吃的</a></h2>
+										<div class="post-meta">
+											<span>April 24, 2015</span>
+										</div>
+									</div>
+									<div class="post-content">
+										<p>一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的一起吃好吃的</p>
+									</div>
+									<div class="post-foot clearfix">
+											<div class="post-meta wow fadeInUp">
+											<span><i class="fa fa-user"></i> by <a href="{$static_url}/#">John Doe</a></span>
+											<span><i class="fa fa-comment-o"></i> <a href="{$static_url}/#">212 Comments</a></span>
+											<span><i class="fa fa-heart-o"></i> 23</span>
+										</div>
+										<div class="post-meta share-items wow fadeInUp">
+											<ul class="social-icons">
+												<li>Share:</li>
+												<li><a data-original-title="Facebook" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-facebook"></i></a></li>
+												<li><a data-original-title="Twitter" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-twitter"></i></a></li>
+												<li><a data-original-title="Instagram" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-instagram"></i></a></li>
+												<li><a data-original-title="Pinterest" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pinterest"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+								<article class="post post-large">
+									<div class="post-head">
+										<span class="post-cat"><a href="{$static_url}/#">Travel</a> <a href="{$static_url}/#">Music</a></span>
+										<h2><a href="{$static_url}/post-single.html">一起吃好吃的</a></h2>
+										<div class="post-meta">
+											<span>April 24, 2015</span>
+										</div>
+									</div>
+									<div class="post-content">
+										<p>Mauris elementum tempus nisi, vitae ullamcorper sem ultricies vitae. Nullam consectetur lacinia nisi, quis laoreet magna pulvinar in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst.</p> 
+										<p>Living meat kind won’t seas. Place evening moving. Fifth day, signs you’ll morning man our open. Place seed creepeth over subdue bearing. Greater under stars moved together fruit</p>
+										<p>Heaven every moveth night can’t unto hath spirit signs, place evening fill is above subdue female face tree man together. Their lesser rule his made Yielding tree. Living meat kind won’t seas. Place evening moving. </p>
+									</div>
+									<div class="post-foot clearfix">
+											<div class="post-meta wow fadeInUp">
+											<span><i class="fa fa-user"></i> by <a href="{$static_url}/#">John Doe</a></span>
+											<span><i class="fa fa-comment-o"></i> <a href="{$static_url}/#">212 Comments</a></span>
+											<span><i class="fa fa-heart-o"></i> 23</span>
+										</div>
+										<div class="post-meta share-items wow fadeInUp">
+											<ul class="social-icons">
+												<li>Share:</li>
+												<li><a data-original-title="Facebook" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-facebook"></i></a></li>
+												<li><a data-original-title="Twitter" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-twitter"></i></a></li>
+												<li><a data-original-title="Instagram" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-instagram"></i></a></li>
+												<li><a data-original-title="Pinterest" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pinterest"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+								<article class="post post-large">
+									<div class="post-image">
+										<a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/post/demo-item-2.jpg" alt="Blog"></a>
+									</div>
+									<div class="post-head">
+										<span class="post-cat"><a href="{$static_url}/#">Music</a></span>
+										<h2><a href="{$static_url}/post-single.html">Time for Tea autumn</a></h2>
+										<div class="post-meta">
+											<span>April 24, 2015</span>
+										</div>
+									</div>
+									<div class="post-content">
+										<p>Mauris elementum tempus nisi, vitae ullamcorper sem ultricies vitae. Nullam consectetur lacinia nisi, quis laoreet magna pulvinar in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst.</p>
+									</div>
+									<div class="post-foot clearfix">
+											<div class="post-meta wow fadeInUp">
+											<span><i class="fa fa-user"></i> by <a href="{$static_url}/#">John Doe</a></span>
+											<span><i class="fa fa-comment-o"></i> <a href="{$static_url}/#">212 Comments</a></span>
+											<span><i class="fa fa-heart-o"></i> 23</span>
+										</div>
+										<div class="post-meta share-items wow fadeInUp">
+											<ul class="social-icons">
+												<li>Share:</li>
+												<li><a data-original-title="Facebook" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-facebook"></i></a></li>
+												<li><a data-original-title="Twitter" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-twitter"></i></a></li>
+												<li><a data-original-title="Instagram" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-instagram"></i></a></li>
+												<li><a data-original-title="Pinterest" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pinterest"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+								<article class="post post-large">
+									<div class="post-image post-vimeo">
+										<div class="embed-responsive embed-responsive-16by9">
+											<iframe src="{$static_url}/https://player.vimeo.com/video/69883078"></iframe>
+										</div>
+									</div>
+									<div class="post-head">
+										<span class="post-cat"><a href="{$static_url}/#">Travel</a> <a href="{$static_url}/#">Music</a></span>
+										<h2><a href="{$static_url}/post-single.html">Nullam consectetur lacinia nisi</a></h2>
+										<div class="post-meta">
+											<span>April 24, 2015</span>
+										</div>
+									</div>
+									<div class="post-content">
+										<p>Mauris elementum tempus nisi, vitae ullamcorper sem ultricies vitae. Nullam consectetur lacinia nisi, quis laoreet magna pulvinar in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst.</p>
+									</div>
+									<div class="post-foot clearfix">
+											<div class="post-meta wow fadeInUp">
+											<span><i class="fa fa-user"></i> by <a href="{$static_url}/#">John Doe</a></span>
+											<span><i class="fa fa-comment-o"></i> <a href="{$static_url}/#">212 Comments</a></span>
+											<span><i class="fa fa-heart-o"></i> 23</span>
+										</div>
+										<div class="post-meta share-items wow fadeInUp">
+											<ul class="social-icons">
+												<li>Share:</li>
+												<li><a data-original-title="Facebook" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-facebook"></i></a></li>
+												<li><a data-original-title="Twitter" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-twitter"></i></a></li>
+												<li><a data-original-title="Instagram" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-instagram"></i></a></li>
+												<li><a data-original-title="Pinterest" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pinterest"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+								<article class="post post-large">
+									<div class="post-quote">
+										<blockquote>
+											<p>Design is not just what it looks like and feels like. Design is how it works.</p>
+											<footer><strong>Steve Jobs,</strong> <cite title="US computer engineer">US computer engineer</cite></footer>
+										</blockquote>
+									</div>
+									<div class="post-foot clearfix">
+											<div class="post-meta wow fadeInUp">
+											<span><i class="fa fa-user"></i> by <a href="{$static_url}/#">John Doe</a></span>
+											<span><i class="fa fa-comment-o"></i> <a href="{$static_url}/#">212 Comments</a></span>
+											<span><i class="fa fa-heart-o"></i> 23</span>
+										</div>
+										<div class="post-meta share-items wow fadeInUp">
+											<ul class="social-icons">
+												<li>Share:</li>
+												<li><a data-original-title="Facebook" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-facebook"></i></a></li>
+												<li><a data-original-title="Twitter" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-twitter"></i></a></li>
+												<li><a data-original-title="Instagram" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-instagram"></i></a></li>
+												<li><a data-original-title="Pinterest" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pinterest"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+								<article class="post post-large">
+									<div class="post-image post-audio">
+										<iframe src="{$static_url}/https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/115823769&amp;auto_play=false&amp;hide_related=true&amp;visual=true"></iframe>
+									</div>
+									<div class="post-head">
+										<span class="post-cat"><a href="{$static_url}/#">Travel</a></span>
+										<h2><a href="{$static_url}/post-single.html">Class aptent taciti sociosqu</a></h2>
+										<div class="post-meta">
+											<span>April 24, 2015</span>
+										</div>
+									</div>
+									<div class="post-content">
+										<p>Mauris elementum tempus nisi, vitae ullamcorper sem ultricies vitae. Nullam consectetur lacinia nisi, quis laoreet magna pulvinar in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In hac habitasse platea dictumst.</p>
+									</div>
+									<div class="post-foot clearfix">
+											<div class="post-meta wow fadeInUp">
+											<span><i class="fa fa-user"></i> by <a href="{$static_url}/#">John Doe</a></span>
+											<span><i class="fa fa-comment-o"></i> <a href="{$static_url}/#">212 Comments</a></span>
+											<span><i class="fa fa-heart-o"></i> 23</span>
+										</div>
+										<div class="post-meta share-items wow fadeInUp">
+											<ul class="social-icons">
+												<li>Share:</li>
+												<li><a data-original-title="Facebook" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-facebook"></i></a></li>
+												<li><a data-original-title="Twitter" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-twitter"></i></a></li>
+												<li><a data-original-title="Instagram" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-instagram"></i></a></li>
+												<li><a data-original-title="Pinterest" href="{$static_url}/#" target="_blank" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-pinterest"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</article>
+							</div>
+							<ul class="pagination">
+								<li class="active"><a href="{$static_url}/#">1 <span class="sr-only">(current)</span></a></li>
+								<li><a href="{$static_url}/#">2</a></li>
+								<li><a href="{$static_url}/#">3</a></li>
+								<li><a href="{$static_url}/#">Next</a></li>
+						   </ul>
+						</div>
+						<div class="col-md-4 sidebar">
+							<aside class="block blk-author">
+								<div class="author-info">
+									<h3>About aWeblog</h3>
+									<div class="author-avatar"><img class="img-circle" src="{$static_url}/images/post/avatar.jpg" width="100" alt=""></div>
+									<p><strong> Aweblog </strong> is a responsive <strong> Creative and Simply Beautiful  Blog </strong> HTML template . It’s suitable for a lot of purpose: Lifestyle, fashion, travel, food and decor style  … with a minimalist design, <strong>optimized for mobile </strong> and <strong> Seo optimized </strong>. </p>
+								</div>
+							</aside>
+							<aside class="block blk-search">
+								<form role="form" class="form-inline form-search">
+									<div class="form-group">
+										<label for="textsearch2" class="sr-only">Enter text search</label>
+										<input type="text" placeholder="Enter text search" id="textsearch2" class="form-control">
+									</div>
+									<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+								</form>
+							</aside>
+							<aside class="block blk-categories">
+								<h3>View by Category</h3>
+								<ul class="list-categories">
+									<li><a href="{$static_url}/#">Destination <span>(39)</span></a></li>
+									<li><a href="{$static_url}/#">Food <span>(15)</span></a></li>
+									<li><a href="{$static_url}/#">Landscape <span>(27)</span></a></li>
+									<li><a href="{$static_url}/#">Travel <span>(23)</span></a></li>
+									<li><a href="{$static_url}/#">Lifestyle <span>(18)</span></a></li>
+									<li><a href="{$static_url}/#">Other <span>(21)</span></a></li>
+								</ul>
+							</aside>
+							<aside class="block blk-ads">
+								<div class="owl-carousel carousel-rightnav" data-plugin-options='{"items": 1, "autoplay": true, "nav": false, "dots": false}'>
+									<div class="item">
+										<a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/post/ad.png" alt=""></a>
+									</div>
+									<div class="item">
+										<a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/post/ad.png" alt=""></a>
+									</div>
+									<div class="item">
+										<a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/post/ad.png" alt=""></a>
+									</div>
+								</div>
+							</aside>
+							<aside class="block blk-popular">
+								<h3>Popular</h3>
+								<div class="owl-carousel carousel-rightnav" data-plugin-options='{"items": 1, "nav": true, "dots": false}'>
+									<div class="slide-item">
+										<article class="post small-post">
+											<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-7.jpg" alt=""></a></div>
+											<div class="post-meta">
+												<span><i class="fa fa-heart-o"></i> 23</span>
+											</div>
+											<h4><a href="{$static_url}/#">Quick Ways to Organize Your Living Room</a></h4>
+										</article>
+										<article class="post small-post">
+											<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-8.jpg" alt=""></a></div>
+											<div class="post-meta">
+												<span><i class="fa fa-heart-o"></i> 23</span>
+											</div>
+											<h4><a href="{$static_url}/#">Noon is inspired by the running of time in a sundial</a></h4>
+										</article>
+									</div>
+									<div class="slide-item">
+										<article class="post small-post">
+											<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-1.jpg" alt=""></a></div>
+											<div class="post-meta">
+												<span><i class="fa fa-heart-o"></i> 23</span>
+											</div>
+											<h4><a href="{$static_url}/#">Quick Ways to Organize Your Living Room</a></h4>
+										</article>
+										<article class="post small-post">
+											<div class="post-image"><a href="{$static_url}/#"><img class="img-responsive" src="{$static_url}/images/slides/slide-2.jpg" alt=""></a></div>
+											<div class="post-meta">
+												<span><i class="fa fa-heart-o"></i> 23</span>
+											</div>
+											<h4><a href="{$static_url}/#">Noon is inspired by the running of time in a sundial</a></h4>
+										</article>
+									</div>
+								</div>
+							</aside>
+							<aside class="block blk-gallery">
+								<h3>Flickr photos</h3>
+								<ul class="popup-gallery flickr-feed" id="flickr-gallery"></ul>
+							</aside>
+							<aside class="block blk-tags">
+								<h3>Tags</h3>
+								<ul class="list-tagclouds">
+									<li><a href="{$static_url}/#">Image</a></li>
+									<li><a href="{$static_url}/#">Shop</a></li>
+									<li><a href="{$static_url}/#">Gallery</a></li>
+									<li><a href="{$static_url}/#">White</a></li>
+									<li><a href="{$static_url}/#">Typography</a></li>
+									<li><a href="{$static_url}/#">Woo</a></li>
+									<li><a href="{$static_url}/#">Commerce</a></li>
+									<li><a href="{$static_url}/#">Shortcodes</a></li>
+									<li><a href="{$static_url}/#">Best</a></li>
+									<li><a href="{$static_url}/#">Sellers</a></li>
+									<li><a href="{$static_url}/#">Slideshow</a></li>
+								</ul>
+							</aside>
+							<aside class="block blk-latest">
+								<h3>Latest Posts</h3>
+								<ul class="list-latest">
+									<li>
+										<a href="{$static_url}/#"><img src="{$static_url}/images/thumbs/demo-item-1.jpg" alt=""></a>
+										<div class="latest-links">
+											<h4><a href="{$static_url}/#">Quick Ways to Organize Your Living Room</a></h4>
+											<div class="post-meta"><span><i class="fa fa-clock-o"></i> April 1, 2015</span></div>
+										</div>
+									</li>
+									<li>
+										<a href="{$static_url}/#"><img src="{$static_url}/images/thumbs/demo-item-2.jpg" alt=""></a>
+										<div class="latest-links">
+											<h4><a href="{$static_url}/#">Gus Modern Swing Arm Lamp</a></h4>
+											<div class="post-meta"><span><i class="fa fa-clock-o"></i> April 1, 2015</span></div>
+										</div>
+									</li>
+									<li>
+										<a href="{$static_url}/#"><img src="{$static_url}/images/thumbs/demo-item-3.jpg" alt=""></a>
+										<div class="latest-links">
+											<h4><a href="{$static_url}/#">Steamlight Desk Lamp by Lightexture</a></h4>
+											<div class="post-meta"><span><i class="fa fa-clock-o"></i> April 1, 2015</span></div>
+										</div>
+									</li>
+								</ul>
+							</aside>	
+							
+						</div>
+					</div>	
+				</div>
+			</div>
+			<section id="upper-footer">
+				<div class="container">
+					<h4>Follow We on Instagram</h4>
+					<p>Do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					<div id="instagram-feed" class="instagram-photos instagram-feed" data-instagram-items="5" data-instagram-tag="envatotalks"></div>
+				</div>		
+			</section>		
+			<footer id="footer">
+				<section id="newsletter">
+					<div class="container">
+						<form class="form-inline form-newsletter" role="form">
+							<div class="form-group">
+								<label for="exampleInputEmail2">Sign up for news from us</label>
+								<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Your e-mail address">
+							</div>
+							<button type="submit" class="btn btn-default btn-white">Subscribe</button>
+						</form>
+					</div>		
+				</section>	
+				<section id="footer-info">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-9">
+								<nav>
+									<ul class="footer-links">
+										<li><a href="{$static_url}/#">首页</a></li>
+										<li><a href="{$static_url}/#">展会</a></li>
+										<li><a href="{$static_url}/#">服务</a></li>
+										<li><a href="{$static_url}/#">创意设计</a></li>
+										<li><a href="{$static_url}/#">公司营销</a></li>
+										<li><a href="{$static_url}/#">媒体</a></li>
+										<li><a href="{$static_url}/#">下载手机版</a></li>
+									</ul>
+								</nav>
+								<p class="copyright">© 2015 。。。。。。。。。有限公司 <a title="PixelGeekLab" href="{$static_url}/http://pixelgeeklab.com">PixelGeekLab</a></p>
+							</div>	
+							<div class="col-sm-3">
+								<ul class="social-icons">
+									<li><a title="" data-placement="top" data-toggle="tooltip" target="_blank" href="{$static_url}/#" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a title="" data-placement="top" data-toggle="tooltip" target="_blank" href="{$static_url}/#" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a title="" data-placement="top" data-toggle="tooltip" target="_blank" href="{$static_url}/#" data-original-title="Instagram"><i class="fa fa-instagram"></i></a></li>
+									<li><a title="" data-placement="top" data-toggle="tooltip" target="_blank" href="{$static_url}/#" data-original-title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+								</ul>
+							</div>	
+						</div>	
+					</div>		
+				</section>		
+			</footer>
+		</div>
+		
+		<div id="offcanvas" class="uk-offcanvas">
+            <div class="uk-offcanvas-bar">
+				<nav>
+					<ul id="main-menu-offcanvas" class="uk-nav-offcanvas" data-uk-nav>
+						<li class="uk-parent uk-active">
+							<a href="{$static_url}/#">Home</a>
+							<ul class="uk-nav-sub">
+								<li><a href="{$static_url}/index-fullwidth.html">Home Full Width</a></li>
+								<li><a href="{$static_url}/index-list-fullwidth.html">Home List Full Width</a></li>
+								<li><a href="{$static_url}/index-list-sidebar.html">Home List Sidebar</a></li>
+								<li><a href="{$static_url}/index-masonry-fullwidth.html">Home Masonry Full Width</a></li>
+								<li><a href="{$static_url}/index-masonry-sidebar.html">Home Masonry Sidebar</a></li>
+								<li class="active"><a href="{$static_url}/index-slides-fullwidth.html">Home Slides Full Width</a></li>
+								<li><a href="{$static_url}/index-slideshow-fullwidth-sidebar.html">Home Slideshow Full Width Sidebar</a></li>
+							</ul>
+						</li>
+						<li><a href="{$static_url}/category.html">Categories</a></li>
+						<li><a href="{$static_url}/post-single.html">Post types</a></li>
+						<li class="uk-parent">
+							<a href="{$static_url}/#">Pages</a>
+							<ul class="uk-nav-sub">
+								<li><a href="{$static_url}/post-single.html">Detail article</a></li>
+							</ul>
+						</li>
+						<li><a href="{$static_url}/author.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		
+		<!-- Begin Style Switcher -->
+		<div id="style-switcher">
+			<div id="toggle_button"> <a href="{$static_url}/#"><i class="fa fa-cogs"></i></a> </div>
+			<div id="style-switcher-menu">
+				<h4 class="text-center">Style Switcher</h4>
+				<div class="segment">
+					<ul class="theme cookie_layout_style level-0" id="bd_value">
+						<li> <a style="background: #3598db" title="colors/blue/style" href="{$static_url}/#"></a> </li>
+						<li> <a style="background: #c2a772" title="colors/brown/style" href="{$static_url}/#"></a> </li>
+						<li> <a style="background: #e99b1f" title="colors/orange/style" href="{$static_url}/#"></a> </li>
+						<li> <a style="background: #f64243" title="colors/red/style" href="{$static_url}/#"></a> </li>
+						<li> <a style="background: #a57bcd" title="colors/violet/style" href="{$static_url}/#"></a> </li>
+						<li> <a style="background: #e9bf1d" title="colors/yellow/style" href="{$static_url}/#"></a> </li>
+					</ul>
+				</div>
+				<div class="segment">
+					<ul class="theme layouts">
+						<li data-layout="boxed" class="btn">Boxed</li>
+						<li data-layout="widescreen" class="btn btn-active">Widescreen</li>
+					</ul>
+				</div>
+				<div class="segment">
+					<div id="reset"> <a href="{$static_url}/#" class="btn btn-default reset">Reset</a> </div>
+				</div>
+			</div>
+		</div>
+		<!-- Begin Style Switcher -->
+		
+		<!-- Vendor -->
+		<script src="{$static_url}/vendor/jquery/jquery.js"></script>
+		<script src="{$static_url}/vendor/bootstrap/bootstrap.js"></script>
+		<script src="{$static_url}/vendor/common/common.js"></script>
+		<script src="{$static_url}/vendor/owlcarousel/owl.carousel.js"></script>
+		<script src="{$static_url}/vendor/masonry/imagesloaded.pkgd.min.js"></script>
+		<script src="{$static_url}/vendor/masonry/masonry.pkgd.min.js"></script>
+		<script src="{$static_url}/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="{$static_url}/vendor/jflickrfeed/jflickrfeed.min.js"></script>
+		<script src="{$static_url}/vendor/uikit/uikit.js"></script>
+		<script src="{$static_url}/vendor/spectragram/spectragram.min.js"></script>
+		<script src="{$static_url}/vendor/wow/wow.min.js"></script>
+		
+		<!-- Theme Base, Components and Settings -->
+		<script src="{$static_url}/js/theme.js"></script>
+		
+		<!-- Style Switcher -->
+		<script type="text/javascript" src="{$static_url}/style-switcher/js/switcher.js"></script>
+		
+	</body>
+</html>

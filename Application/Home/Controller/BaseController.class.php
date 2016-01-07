@@ -11,11 +11,7 @@ class BaseController extends Controller
 		//入口
 		header("Content-Type:text/html; charset=utf-8");
 		//header("Access-Control-Allow-Origin：*");
-		
 		//header("Location: /404.html");
-		
-		
-		
 		//检查用户是否自动登录
 		$user_info = session("user_info");
 		if (!$user_info) {
@@ -40,8 +36,6 @@ class BaseController extends Controller
 		}
 		//增加cdn_url变量
 		$this->static_url = C("CDN_URL") . "/Public/default/";
-
-
 	}
 	
 	function   _empty(){
