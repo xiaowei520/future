@@ -14,6 +14,8 @@ class AccountController extends BaseController {
 		$account_model = D ( 'Account' );
 		$data = $account_model->judge_account_login ( $account_id, $passwd );
 		if ($data) {
+
+			//什么鬼?sublime
 			
 			// login success
 			$user_info ['account_name'] = $data['account_name'];
