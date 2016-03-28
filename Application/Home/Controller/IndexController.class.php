@@ -13,10 +13,11 @@ class IndexController extends BaseController {
 		// 首页图片信息的路径信息问题。由于还未确定应该是什么类型的。所以先人为写数组
 		$index_img_list = array (
 				0 => array (
-						'url' => '2.jpeg',
-						'name' => '日历',
-						'desc' => '可以记录大姨妈，行程表',
-						'href' => '/function/open_rili',
+						'url' => '2.jpeg',//用户个性头像
+						'name' => 'PHP技术总结',//个人宣言
+						'desc' => '孙伟个人描述',//个人一些描述
+						'href' => '/Blog/index/news_id/1',
+                        //用户ID user_id  文章id  news_id 1
 				),
 				1 => array (
 						'url' => '2.jpeg',

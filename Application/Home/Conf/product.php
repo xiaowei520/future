@@ -15,9 +15,10 @@ return array(
 		
 	//网站url
 	'SITE_URL' => "http://114.215.146.54/",
-	'URL_MODEL' => 1,
-		
-	
+	'URL_MODEL' => 2,
+
+    'VAR_URL_PARAMS' => '_URL_',
+
 	'DB_HOST' => '114.215.146.54',
 	'DB_PORT' => '3306',
 	'DB_USER' => 'root',
