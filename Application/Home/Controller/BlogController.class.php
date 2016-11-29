@@ -85,7 +85,7 @@ class BlogController extends BaseController
     public function addNews(){
         //保存一下吧
         //or新增
-        if($this->USERINFO['id'] !=0){
+        if(empty($this->USERINFO['id'])){
             $this->error('登陆超时。请登录!');
         }
         $content = I('content');
