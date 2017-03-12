@@ -18,7 +18,7 @@ class AccountController extends BaseController
         if ($data) {
 
             //什么鬼?sublime
-
+            //--
 
             // login success
             $user_info ['account_name'] = $data['account_name'];
